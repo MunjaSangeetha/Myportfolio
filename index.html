@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume – MUNJA SANGEETHA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #2563eb;
+      --bg: #f7f7fb;
+      --ink: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --shadow: 0 10px 25px rgba(2, 6, 23, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+    }
+    .toolbar {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; gap: .5rem; align-items: center; justify-content: flex-end;
+      padding: .6rem .8rem; background: rgba(255,255,255,.85); backdrop-filter: saturate(180%) blur(12px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .btn {
+      border: 1px solid #e5e7eb; background: #fff; color: #111827; cursor: pointer;
+      padding: .5rem .8rem; border-radius: .7rem; font-weight: 600; box-shadow: var(--shadow);
+    }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .page { max-width: 1000px; margin: 1rem auto; padding: 1.2rem; }
+    .grid { display: grid; grid-template-columns: 320px 1fr; gap: 1.2rem; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border-radius: 18px; box-shadow: var(--shadow); padding: 1.1rem; }
+    .header { display: flex; gap: 1rem; align-items: center; }
+    .avatar { width: 84px; height: 84px; border-radius: 18px; background: #e2e8f0; flex: 0 0 auto; overflow: hidden; }
+    .name { font-size: clamp(1.6rem, 4vw, 2rem); font-weight: 800; margin: 0; }
+    .role { margin: .15rem 0 0; color: var(--muted); font-weight: 600; }
+    .badges { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+    .badge { background: #eef2ff; color: #3730a3; border: 1px solid #e0e7ff; padding: .25rem .5rem; border-radius: 999px; font-size: .8rem; font-weight: 600; }
+    h2 { font-size: 1.05rem; text-transform: uppercase; color: var(--muted); margin: 0 0 .8rem; }
+    .item { margin-bottom: .9rem; }
+    .item:last-child { margin-bottom: 0; }
+    .item .top { display: flex; justify-content: space-between; gap: .6rem; }
+    .item .title { font-weight: 700; }
+    .item .meta { color: var(--muted); font-size: .92rem; }
+    .pill { display: inline-block; padding: .28rem .55rem; border-radius: .6rem; border: 1px solid #e5e7eb; margin: .2rem .25rem .2rem 0; font-size: .86rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    [contenteditable="true"] { outline: 2px dashed rgba(37, 99, 235, .35); border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button class="btn" id="toggleEdit">✏️ Edit Mode</button>
+    <button class="btn" id="changeColor">🎨 Theme</button>
+    <button class="btn primary" onclick="window.print()">⬇️ Download / Print PDF</button>
+  </div>
+
+  <main class="page">
+    <section class="card header">
+      <div class="avatar" contenteditable="true"></div>
+      <div>
+        <h1 class="name" contenteditable="true">MUNJA SANGEETHA</h1>
+        <p class="role" contenteditable="true">AI & ML Enthusiast · UI/UX Designer · Developer</p>
+        <div class="badges">
+          <span class="badge" contenteditable="true">Open to Work</span>
+          <span class="badge" contenteditable="true">Remote • Hybrid</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- Left Column -->
+      <aside class="card">
+        <h2>Contact</h2>
+        <div class="item" contenteditable="true">
+          📍Hanamkonda, India<br>
+          📧 sangeetha79920@gmail.com 📱 +91 8978827925<br>
+          🔗 <a href="#">portfolio.link</a> · <a href="#">linkedin.com/in/username</a>
+        </div>
+
+        <h2>Skills</h2>
+        <div class="item">
+          <span class="pill" contenteditable="true">Python</span>
+          <span class="pill" contenteditable="true">Java</span>
+          <span class="pill" contenteditable="true">Figma</span>
+          <span class="pill" contenteditable="true">UI/UX Design</span>
+          <span class="pill" contenteditable="true">Machine Learning</span>
+        </div>
+
+        <h2>Tools</h2>
+        <div class="item">
+          <span class="pill" contenteditable="true">Git</span>
+          <span class="pill" contenteditable="true">VS Code</span>
+        </div>
+
+        <h2>Languages</h2>
+        <div class="item" contenteditable="true">
+          English (Fluent) · Telugu (Native)
+        </div>
+      </aside>
+
+      <!-- Right Column -->
+      <section class="card">
+        <h2>Summary</h2>
+        <p class="item" contenteditable="true">
+          I am currently pursuing a <b>Bachelor of Technology in Computer Science and Engineering with a Specialization in Artificial Intelligence and Machine Learning</b> at <b>SR University</b>, set to graduate in 2027.  
+          I’m passionate about using technology to solve real-world problems, especially in Artificial Intelligence.  
+          Skilled in Python and Java, I also enjoy crafting user-centered UI/UX designs that bridge backend logic with frontend creativity.  
+          I thrive in collaborative environments, leveraging problem-solving, leadership, creativity, time management, active listening, motivation, innovation, public speaking, adaptability, teamwork, and flexibility to drive success.
+        </p>
+
+        <h2>Internships</h2>
+        <div class="item">
+          <div class="top">
+            <div class="title">AI Intern – Agratas Academy Pvt Ltd</div>
+            <div class="meta">3 Months · Online</div>
+          </div>
+          <ul>
+            <li>Researched and implemented AI models to address real-world problems.</li>
+            <li>Worked on improving predictive accuracy using AI techniques.</li>
+            <li>Earned certifications in Artificial Intelligence and Industrial Training.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="top">
+            <div class="title">UI/UX Design Intern – InternPe</div>
+            <div class="meta">Jun 02 – Jun 29, 2025 · Remote</div>
+          </div>
+          <ul>
+            <li>Designed real-world UI/UX projects enhancing creativity and technical thinking.</li>
+            <li><b>Key Projects:</b> Restaurant Ordering Menu, Fashion E-commerce Website, Food Promotions Newsletter, Coffee Shop Interface.</li>
+          </ul>
+        </div>
+
+        <h2>Workshops</h2>
+        <div class="item">
+          <div class="title">Online Workshop – Dedication, Leadership, and Outstanding Contribution</div>
+          <div class="meta">KITECH · 2024</div>
+          <p>Focused on leadership, motivation, and making meaningful contributions to professional growth.</p>
+        </div>
+
+        <h2>Education</h2>
+        <div class="item">
+          <div class="top">
+            <div class="title">B.Tech in Computer Science and Engineering (AI & ML)</div>
+            <div class="meta">SR University · 2023 – 2027</div>
+          </div>
+          <div class="meta">CGPA: 8.4/10 · Relevant Coursework: DAA, DBMS, OOP, HCI</div>
+        </div>
+
+        <h2>Achievements</h2>
+        <ul class="item">
+          <li>Semester Topper – 2024 (2nd Year, 1st Semester)</li>
+          <li>Merit Certificates for Academic Excellence</li>
+          <li>Open-source contributor (3 merged PRs) in accessibility tooling</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleEdit');
+    let editOn = false;
+    toggleBtn.addEventListener('click', () => {
+      editOn = !editOn;
+      document.querySelectorAll('[contenteditable]')
+        .forEach(el => el.setAttribute('contenteditable', String(editOn)));
+      toggleBtn.textContent = editOn ? '✅ Editing On' : '✏️ Edit Mode';
+    });
+    const themes = ['#2563eb','#16a34a','#ea580c','#9333ea','#0ea5e9','#ef4444','#0f766e'];
+    let ti = 0;
+    document.getElementById('changeColor').addEventListener('click', () => {
+      ti = (ti + 1) % themes.length;
+      document.documentElement.style.setProperty('--accent', themes[ti]);
+    });
+  </script>
+</body>
+</html>
